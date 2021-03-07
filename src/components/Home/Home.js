@@ -1,11 +1,11 @@
 import { Navbar, Nav, FormControl, Button, Form, NavDropdown } from 'react-bootstrap'
 
-const Register = () => {
+const Home = () => {
   return (
     <div>
-      Register
+      Home
     </div>
   );
 };
 
-export default Register;
+export default Home;
