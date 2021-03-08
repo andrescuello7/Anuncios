@@ -1,27 +1,10 @@
 import { Navbar, Nav } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import useLogin from "../../UseForms/useLogin";
 
 const NavBar = ({ setRoutes, token }) => {
-  const [user, setUser] = useState("");
-  useEffect(() => {
-    GET(token);
-  }, [token]);
-  const GET = async () => {
-    try {
-      const headers = { "x-auth-token": token };
-      const { data } = await axios.get("http://localhost:4000/api/usuarios", {
-        headers,
-      });
-      setUser(data.usuario.name);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const Salir = () => {
-    localStorage.removeItem("token");
-    window.location.reload();
-  };
+  const { user, Salir } = useLogin({token})
   return (
     <div>
       <Navbar bg="light" expand="lg">
