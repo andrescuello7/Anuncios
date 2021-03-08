@@ -10,12 +10,13 @@ import Register from '../src/components/Register/Register';
 
 function App() {
   const [ routes, setRoutes ] = useState("home")
+  const [ token, setToken ] = useState(localStorage.getItem('token'))
   return (
     <div>
-      <Header setRoutes={setRoutes} />
+      <Header setRoutes={setRoutes} token={token} />
       {routes == "home" && <Home />}
-      {routes == "login" && <Login />}
-      {routes == "register" && <Register />}
+      {routes == "login" && <Login setRoutes={setRoutes} setToken={setToken} />}
+      {routes == "register" && <Register setRoutes={setRoutes} setToken={setToken} />}
     </div>
   );
 }
