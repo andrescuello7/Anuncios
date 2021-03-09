@@ -8,10 +8,6 @@ import Home from '../src/components/Home/Home';
 import Login from '../src/components/Login/Login';
 import Register from '../src/components/Register/Register';
 
-//UseForm
-import useHome from "../src/UseForms/useHome";
-import useLogin from "../src/UseForms/useLogin";
-
 function App() {
   const [ routes, setRoutes ] = useState("home")
   const [ token, setToken ] = useState(localStorage.getItem('token'))

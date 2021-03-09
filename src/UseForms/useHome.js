@@ -29,7 +29,6 @@ const useHome = () => {
     try {
       const { data } = await axios.get("http://localhost:4000/api/subir");
       setTexto(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }

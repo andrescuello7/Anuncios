@@ -1,14 +1,12 @@
 import { Navbar, Nav } from "react-bootstrap";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import useLogin from "../../UseForms/useLogin";
+import useNavbar from "../../UseForms/useNavbar";
 
 const NavBar = ({ setRoutes, token }) => {
-  const { user, Salir } = useLogin({token})
+  const { user, Salir } = useNavbar({token})
   return (
     <div>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home"><i>Anuncios</i></Navbar.Brand>
+        <Navbar.Brand href="#home"><i><b>Comunidad</b></i></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

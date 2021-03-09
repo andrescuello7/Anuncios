@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const useLogin = ({token}) => {
+const useNavbar = ({token}) => {
   const [user, setUser] = useState("");
   useEffect(() => {
     GET(token);
@@ -14,7 +14,7 @@ const useLogin = ({token}) => {
       });
       setUser(data.usuario.name);
     } catch (error) {
-      console.log(error);
+      console.log('Iniciar sesion');
     }
   };
   const Salir = () => {
@@ -28,4 +28,4 @@ const useLogin = ({token}) => {
   };
 };
 
-export default useLogin;
+export default useNavbar;

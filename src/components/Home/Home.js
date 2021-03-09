@@ -1,11 +1,10 @@
 import { Form, Toast } from "react-bootstrap";
 import useHome from "../../UseForms/useHome";
-import useLogin from "../../UseForms/useLogin";
-import Mensaje from "../Mensaje/Mensaje";
+import useNavbar from "../../UseForms/useNavbar";
 
 const Home = ({ token }) => {
   const { handleSubmit, handleChange, texto } = useHome();
-  const { user } = useLogin({token});
+  const { user } = useNavbar({ token });
   const extract = texto.map((text, i) => (
     <div key={i}>
       <Toast>
@@ -22,33 +21,27 @@ const Home = ({ token }) => {
     <div>
       <div>
         {token && (
-          <Form className="formText" onSubmit={handleSubmit}>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label>
-                <b>Titulo</b>
-              </Form.Label>
-              <Form.Control
-                type="text"
-                onChange={handleChange}
-                name="titulo"
-                placeholder="Titulo"
-              />
-            </Form.Group>
-            <Form.Group controlId="formBasicPassword">
-              <Form.Label>
-                <b>Texto</b>
-              </Form.Label>
-              <Form.Control
+          <form className="formText p-2" onSubmit={handleSubmit}>
+            <Form.Control
+              type="text"
+              onChange={handleChange}
+              name="titulo"
+              placeholder="Titulo"
+              className="mt-2"
+            />
+            <div className="d-flex">
+              <textarea 
                 type="texto"
                 onChange={handleChange}
                 name="texto"
-                placeholder="Ingrese info"
+                placeholder="Ingrese info..."
+                className="form-control mt-2"
               />
-            </Form.Group>
-            <button className="btn btn-primary w-100" type="submit">
-              Iniciar Sesion
-            </button>
-          </Form>
+              <button className="btn btn-success m-2" type="submit">
+                <b><i>Subir</i></b>
+              </button>
+            </div>
+          </form>
         )}
       </div>
       <div className="m-2">{extract}</div>
