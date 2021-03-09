@@ -1,13 +1,73 @@
+body{
+    background: url(https://i.pinimg.com/originals/56/26/78/56267801d9ec3796345b7c5eadce4145.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .form{
     display: flex;
     justify-content: center;
 }
 
 .formText{
-    color: rgba(34, 34, 32, 0.849);
+    color: rgba(218, 218, 218, 0.849);
     margin: 2%;
     border-radius: 8px;
-    border: 2px solid rgba(0, 0, 0, 0.521);
+    background: rgba(24, 24, 23, 0.616);
     padding: 2% 4%;
     width: 600px;
+}
+
+.muro{
+    color: rgba(34, 34, 32, 0.849);
+    border-radius: 6px;
+    background: rgba(37, 37, 37, 0.699);
+    padding: 1% 4%;
+    width: 500px;
+    margin: 2% 32%;
+}
+
+.Modal{
+    padding: 2% 8%;
+    display: flex;
+    justify-content: center;
+    background: rgba(12, 12, 12, 0.856);
+    color: bisque;
+}
+
+.ModalBorder{
+    display: flex;
+    justify-content: center;
+}
+
+.ModalPrincipal{
+    border-radius: 20px;
+    background: rgba(12, 12, 12, 0.856);
+}
+
+.navbar{
+    background: rgba(14, 13, 13, 0.616);
+}
+
+.muroPublique{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toast{
+    width: 400%;
+}
+
+.cardData{
+    width: 33%;
+    background: rgba(163, 161, 161, 0.404);
+    color: rgba(0, 0, 0, 0.863);
+    padding: 15px 15px 30px 15px;
+    border-radius: 6px;
+}
+
+.separar{
+    display: flex;
+    justify-content: space-between;
 }
