@@ -14,7 +14,7 @@ const useNavbar = ({token}) => {
       });
       setUser(data.usuario.name);
     } catch (error) {
-      console.log('Iniciar sesion');
+      console.log('Iniciar sesion', error);
     }
   };
   const Salir = () => {

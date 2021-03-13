@@ -60,6 +60,9 @@ const Register = ({setRoutes, setToken}) => {
         <button className="btn btn-primary w-100" type="submit">
           Registrarse
         </button>
+        <div className="mt-2">
+          <a onClick={() => setRoutes("login")}>Ya tienes cuenta?, click me</a>
+        </div>
       </Form>
     </div>
   );

@@ -2,7 +2,7 @@ import { Form } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const Login = ({setRoutes, setToken}) => {
+const Login = ({ setRoutes, setToken }) => {
   const [input, setInput] = useState({});
   useEffect(() => {}, []);
   const handleSubmit = async (e) => {
@@ -13,8 +13,8 @@ const Login = ({setRoutes, setToken}) => {
         input
       );
       localStorage.setItem("token", data);
-      setToken(data)
-      setRoutes("home")
+      setToken(data);
+      setRoutes("home");
     } catch (error) {
       console.log(error);
     }
@@ -52,6 +52,9 @@ const Login = ({setRoutes, setToken}) => {
         <button className="btn btn-primary w-100" type="submit">
           Iniciar Sesion
         </button>
+        <div className="mt-2">
+          <a onClick={() => setRoutes("register")}>Aun no tienes cuenta?, click me</a>
+        </div>
       </Form>
     </div>
   );
